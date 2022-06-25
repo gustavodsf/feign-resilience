@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:poc
+    username: h2
+    password: h2
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 5
+      permittedNumberOfCallsInHalfOpenState: 50
+      waitDurationInOpenState: 10000
+      failureRateThreshold: 20
+      eventConsumerBufferSize: 10
+      registerHealthIndicator: true
+    someShared:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 10
+  instances:
+    backendA:
+      baseConfig: default
+      waitDurationInOpenState: 5000
+    backendB:
+      baseConfig: someShared

@@ -1,0 +1,11 @@
+my/tech/poc/demo/UserService.class
+my/tech/poc/demo/UserController.class
+my/tech/poc/demo/UserResponseDTO.class
+my/tech/poc/demo/UserRepository.class
+my/tech/poc/demo/DemoApplication.class
+my/tech/poc/demo/AddressDTO.class
+my/tech/poc/demo/CovidDTO.class
+my/tech/poc/demo/AddressAPI.class
+my/tech/poc/demo/UserMapper.class
+my/tech/poc/demo/CovidAPI.class
+my/tech/poc/demo/User.class
